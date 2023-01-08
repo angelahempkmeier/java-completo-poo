@@ -21,10 +21,18 @@ public class Main {
         for(int i = 0; i<m; i++){
             for(int j = 0; j<n; j++){
                 if(mat[i][j] == number){
-                    esquerda = mat[i][j-1];
-                    direita = mat[i][j+1];
-                    cima = mat[i-1][j];
-                    baixo = mat[i+1][j];
+                    if(j>0){
+                        esquerda = mat[i][j-1];
+                    }
+                    if(j<m-1){
+                        direita = mat[i][j+1];
+                    }
+                    if(i>0){
+                        cima = mat[i-1][j];
+                    }
+                    if(i<n-1){
+                        baixo = mat[i+1][j];
+                    }
                 }
             }
         }
