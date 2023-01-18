@@ -38,8 +38,8 @@ public class Main {
         }
 
         System.out.println("PAYMENTS:");
-        for(int i = 0; i<employeeList.size(); i++){
-            System.out.println(employeeList.get(i).getNome() + ": " + employeeList.get(i).payment());
+        for(Employee emp : employeeList){
+            System.out.println(emp.getNome() + ": " + emp.payment());
         }
     }
 }
