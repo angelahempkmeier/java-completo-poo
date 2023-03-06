@@ -31,8 +31,12 @@ public class Main {
 //        list.sort(comp);
 
         //4 forma, melhorando a sintaxe e deixando mais enxuto
-        Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-        list.sort(comp);
+//        Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+//        list.sort(comp);
+
+        //5 forma, ainda mais reduzida
+        list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
+
 
 
         for (Product p : list){
