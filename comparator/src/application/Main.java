@@ -25,12 +25,14 @@ public class Main {
 //        list.sort(comp);
 
         //forma 3, menos verbosa, funcao lambda
-        Comparator<Product> comp = (p1, p2) -> {
-            return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-        };
+//        Comparator<Product> comp = (p1, p2) -> {
+//            return p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+//        };
+//        list.sort(comp);
+
+        //4 forma, melhorando a sintaxe e deixando mais enxuto
+        Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
         list.sort(comp);
-
-
 
 
         for (Product p : list){
