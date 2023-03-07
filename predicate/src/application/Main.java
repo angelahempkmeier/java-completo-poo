@@ -5,6 +5,7 @@ import util.ProductPredicate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,7 +21,11 @@ public class Main {
 //        list.removeIf(Product::staticProductPredicate);
 
         //forma 3: reference method, n static
-        list.removeIf(Product::nonStaticProductPredicate);
+//        list.removeIf(Product::nonStaticProductPredicate);
+
+        //forma 4: lambda declarada
+        Predicate<Product> pred = p -> p.getPrice() >= 100.0;
+        list.removeIf(pred);
 
 
         for(Product p : list){
