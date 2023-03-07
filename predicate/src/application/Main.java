@@ -14,8 +14,11 @@ public class Main {
         list.add(new Product("Mouse", 50.0));
 
         //forma 1: implementacao da interface
-        list.removeIf(new ProductPredicate());
-        
+//        list.removeIf(new ProductPredicate());
+
+        //forma 2: reference metodo c metodo estatico
+        list.removeIf(Product::staticProductPredicate);
+
         for(Product p : list){
             System.out.println(p);
         }
