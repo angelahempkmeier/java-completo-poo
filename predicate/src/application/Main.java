@@ -27,13 +27,20 @@ public class Main {
 //        Predicate<Product> pred = p -> p.getPrice() >= 100.0;
 //        list.removeIf(pred);
 
-        //forma 4: lambda inline
-        list.removeIf(p -> p.getPrice() >= 100.0);
+        //forma 5: lambda inline
+//        list.removeIf(p -> p.getPrice() >= 100.0 );
+
+        //CONSUMER, mesmas 5 formas, muito parecido, implementei só a ultima
+        list.forEach( p -> p.setPrice(p.getPrice()*1.1));
+
+        list.forEach(System.out::println);
 
 
-        for(Product p : list){
-            System.out.println(p);
-        }
+
+
+//        for(Product p : list){
+//            System.out.println(p);
+//        }
 
 
     }
