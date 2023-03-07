@@ -16,8 +16,12 @@ public class Main {
         //forma 1: implementacao da interface
 //        list.removeIf(new ProductPredicate());
 
-        //forma 2: reference metodo c metodo estatico
-        list.removeIf(Product::staticProductPredicate);
+//        //forma 2: reference metodo c metodo estatico
+//        list.removeIf(Product::staticProductPredicate);
+
+        //forma 3: reference method, n static
+        list.removeIf(Product::nonStaticProductPredicate);
+
 
         for(Product p : list){
             System.out.println(p);
