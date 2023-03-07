@@ -24,8 +24,11 @@ public class Main {
 //        list.removeIf(Product::nonStaticProductPredicate);
 
         //forma 4: lambda declarada
-        Predicate<Product> pred = p -> p.getPrice() >= 100.0;
-        list.removeIf(pred);
+//        Predicate<Product> pred = p -> p.getPrice() >= 100.0;
+//        list.removeIf(pred);
+
+        //forma 4: lambda inline
+        list.removeIf(p -> p.getPrice() >= 100.0);
 
 
         for(Product p : list){
